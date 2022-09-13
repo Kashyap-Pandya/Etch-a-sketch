@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Etch a sketch</h1>
+            <div class="form" id="form">
+                <p>New Grid Size:</p> 
+                <input type="text" id="grid-num" value="20" onchange="changeSize(this.value)" >
+                <button id="user-submit" class="user-submit">Submit</button>
+            </div>
+            <p id="mode-status"></p>
+            <div class="error">
+                <p>input must be between 2 and 100 and must be a number</p>
+            </div>
+
+        </div>
+
+        <div class="board"></div>
+        <div class="buttons">
+            <button id="black" onclick = "changeColor('black')">Black</button>
+            <button id="gray" onclick = "changeColor('gray')">Gray</button>
+            <button id="random" onclick="changeColor('random')">Random</button>
+            <button id="eraser" class="eraser" onclick = "changeColor('white')">Eraser</button>
+            <button id="clear" class="clear" onclick = reset()>Clear</button>
+        </div>
+
+       
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
